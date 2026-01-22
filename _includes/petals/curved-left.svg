@@ -1,0 +1,7 @@
+<!-- Petal: Curved Left with Creases -->
+<g id="petal-curved-left">
+  <path d="M0,0 C-15,-40 -30,-100 5,-150 C35,-100 10,-50 0,0 Z" class="petal-outline" />
+  <!-- Creases -->
+  <path d="M0,-20 C-5,-70 -10,-120 5,-135" class="petal-crease" />
+  <path d="M-5,-30 C-10,-80 -15,-110 -5,-130" class="petal-crease" />
+</g>

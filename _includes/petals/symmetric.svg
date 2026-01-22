@@ -1,0 +1,8 @@
+<!-- Petal: Symmetric with Creases -->
+<g id="petal-symmetric">
+  <path d="M0,0 Q-25,-60 0,-150 Q25,-60 0,0 Z" class="petal-outline" />
+  <!-- Creases -->
+  <path d="M0,-20 Q-5,-80 0,-130" class="petal-crease" />
+  <path d="M-5,-40 Q-10,-90 -5,-120" class="petal-crease" />
+  <path d="M5,-40 Q10,-90 5,-120" class="petal-crease" />
+</g>

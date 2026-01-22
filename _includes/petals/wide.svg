@@ -1,0 +1,8 @@
+<!-- Petal: Wide with Creases -->
+<g id="petal-wide">
+  <path d="M0,0 C-30,-50 -40,-110 0,-150 C40,-110 30,-50 0,0 Z" class="petal-outline" />
+  <!-- Creases -->
+  <path d="M0,-20 Q0,-100 0,-130" class="petal-crease" />
+  <path d="M-10,-40 Q-15,-90 -5,-120" class="petal-crease" />
+  <path d="M10,-40 Q15,-90 5,-120" class="petal-crease" />
+</g>
