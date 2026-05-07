@@ -1,10 +1,12 @@
-# Floral Website
+# floral-web
 
-Academic portfolio website based on Academic Pages template.
+Based on Academic Pages template.
 
 ## Adding Content
 
 This site uses Jekyll collections and data files to manage content. To add new items, create Markdown files in the corresponding directories with the appropriate front matter.
+
+Name a file ".md" to have it render in markdown, name it ".html" to render in HTML. THe site uses [kramdown](https://kramdown.gettalong.org/index.html) for Markdown rendering, which has some differences from other Markdown implementations such as GitHub's.
 
 ### 1. Blog Posts (`_posts/`)
 
@@ -69,15 +71,25 @@ location: "City, Country"
 Course description...
 ```
 
-### 5. Portfolio Items (`_portfolio/`)
+### 5. Projects (`_projects/`)
 
 ```yaml
 ---
 title: "Project Title"
-collection: portfolio
+collection: projects
 excerpt: "Summary with image: <br/><img src='/images/project-thumb.png'>"
 ---
 Project details...
+```
+
+### 6. Fun (`_fun/`)
+
+```yaml
+---
+title: "Fun title"
+collection: fun
+---
+Whatever you'd **wish**
 ```
 
 ### 6. Static Files (PDFs, Images)
@@ -85,66 +97,31 @@ Project details...
 * **Images:** Upload to `images/`. Reference as `/images/your-image.png`.
 * **PDFs/Docs:** Upload to `files/`. Reference as `/files/your-file.pdf`.
 
-## Customizing the Sidebar & Navigation
+## Configuration
 
-* **Sidebar Profile:** Edit `author` information in `_config.yml`.
-* **Navigation Menu:** Edit `_data/navigation.yml` to add or remove links from the top header.
 * **Site Settings:** General settings like site title and theme are in `_config.yml`.
+* **Sidebar Profile:** Edit `author` information in `_config.yml`.
+* **Navigation Menu:** Edit `_data/navigation.yml` to add or remove links from the top header. Adding a new page also might mean adding a collection in `_config.yml` and adding a page in `_pages`. 
 
-## Setup Options
+## Petals
 
-You can run this site locally, with Docker, or with Podman.
+Adding/removing petals requires some tedious shuffling of class assignments and urls/labels in `_layouts/sunflower_home.html`. There are comments in the source to help.
 
-## Option 1: Native/Local Setup
+## Development
 
-### Requirements
-
-* Ruby 3.2+
-* Bundler1
-
-### Steps
-
-1. Install dependencies: `bundle install`
-2. Serve the site: `bundle exec jekyll serve` (or `bundle exec jekyll serve --watch` for auto-reload)
-3. Visit `http://localhost:4000`
-
-## Option 2: Docker Setup
+The easiest way to run the site is using **Docker Compose**. This ensures all Ruby and JavaScript dependencies are correctly installed and isolated.
 
 ### Requirements
 
-* Docker or Podman
-
-### Build
-
-`docker build -t floral-web .`
+* Docker
 
 ### Run
 
-```bash
-docker run -d \
-  --name floral-web \
-  -p 4000:4000 \
-  -v $(pwd):/usr/src/app \
-  -v $HOME:/root \
-  floral-web \
-  sleep infinity
-```
+1.  **Build and Start:**
+    ```bash
+    docker-compose up --build
+    ```
+2.  **Access:** Open `http://localhost:4000` in your browser.
 
-Inside container: `./start.sh`
+The environment is set up to watch for file changes. When you edit a file on your host machine, the site will automatically rebuild inside the container.
 
-## Understanding the Build/Serve Split
-
-This setup uses a workaround for a Jekyll quirk:
-
-**The Problem:**
-
-* `jekyll serve -H 0.0.0.0` generates URLs using `0.0.0.0` instead of `localhost`
-* This breaks CSS/JS loading in your browser
-
-**The Solution:**
-
-* `jekyll build` generates correct URLs from config files
-* `jekyll serve --skip-initial-build` just serves the pre-built files
-* `jekyll build --watch` rebuilds when files change
-
-The `start-jekyll.sh` script handles this automatically.

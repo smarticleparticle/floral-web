@@ -24,7 +24,7 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Alisa Hathaway"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Earth"
@@ -192,6 +192,12 @@ exclude:
   - README
   - tmp
   - vendor
+  - tags
+  - GEMINI.md
+  - CONTRIBUTING.md
+  - "*.sh"
+  - "*.py"
+  - "*.ipynb"
 keep_files:
   - .git
   - .svn
@@ -231,6 +237,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
+    output: true
+    permalink: /:collection/:path/
+  fun:
     output: true
     permalink: /:collection/:path/
 
@@ -288,6 +297,14 @@ defaults:
       type: talks
     values:
       layout: talk
+      author_profile: true
+      share: true
+  # _fun
+  - scope:
+      path: ""
+      type: fun
+    values:
+      layout: single
       author_profile: true
       share: true
 
@@ -354,7 +371,6 @@ tag_archive:
 
 
 # HTML Compression
-# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:

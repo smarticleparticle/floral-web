@@ -317,6 +317,21 @@
       }
     }
   }
+
+  /* Disable greedy-nav logic on mobile to prevent crashes */
+  @include breakpoint(max-width $small) {
+    .visible-links {
+      display: flex !important;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+
+      li {
+        display: inline-block !important;
+        flex: 0 0 auto;
+        vertical-align: middle;
+      }
+    }
+  }
 }
 
 

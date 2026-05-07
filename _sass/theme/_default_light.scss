@@ -2,7 +2,7 @@
     DEFAULT THEME - LIGHT VERSION
     ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #673AB7; /* Deep Lavender/Purple */
+$primary-color              : #F06292; /* Pastel Pink */
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
@@ -11,7 +11,7 @@ $lighter-gray               : mix(#fff, $gray, 90%);
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
-$info-color                 : #673AB7;
+$info-color                 : #F06292;
 $notice-color               : #7a8288;
 $success-color              : #62c462;
 $warning-color              : #FFEB3B; /* Keep warning yellow */
@@ -20,7 +20,7 @@ $warning-color              : #FFEB3B; /* Keep warning yellow */
 $border-radius              : 4px;
 $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
 $global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
+$masthead-height            : 80px;
 $navicon-width              : 28px;
 $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
@@ -29,22 +29,33 @@ $sidebar-screen-min-width   : 1024px;
 /* Default light theme for the site */
 :root {
     --global-base-color                 : #{$primary-color};
-    --global-bg-color                   : #FDFCF5; /* Cream/Off-White */
-    --global-nav-bg-color               : #EDE7F6; /* Soft Lavender Navbar */
-    --global-footer-bg-color            : #f2f3f3;
+    --global-bg-color                   : #F7F5ED; /* Cream */
+    --global-nav-bg-color               : #FFF58F; /* Yellow */
+    --global-footer-bg-color            : #F7F5ED;
     --global-border-color               : #{$lighter-gray};
     --global-dark-border-color          : #bdc1c4;
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #673AB7; /* Deep Lavender Body Links */
+    --global-link-color                 : #F06292; /* Pastel Pink Body Links */
     --global-link-color-hover           : #000000; /* Bold Black Hover */
-    --global-link-color-visited         : #512DA8;  
+    --global-link-color-visited         : #D81B60;  
     --global-masthead-link-color        : #{$dark-gray};
     --global-masthead-link-color-hover  : #000000; /* Bold Black Navbar Hover */    
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
+    --global-selection-color            : #FCE4EC; /* Soft Pink highlight */
+}
+
+::selection {
+  background: var(--global-selection-color);
+  color: #000;
+}
+
+::-moz-selection {
+  background: var(--global-selection-color);
+  color: #000;
 }
 
 

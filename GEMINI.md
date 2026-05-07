@@ -27,27 +27,26 @@ This is a personal academic portfolio website using the **Floral Website** theme
     Access at `http://localhost:4000`.
 
 ### Option 2: Docker / Podman
-**Requirements:** Docker or Podman.
+**Requirements:** Docker or Podman, and Docker Compose.
 
-1.  **Build Image:**
+1.  **Start Environment:**
     ```bash
-    docker build -t floral-web .
+    docker-compose up --build
     ```
-2.  **Run Container:**
-    ```bash
-    docker run -d \
-      --name floral-web \
-      -p 4000:4000 \
-      -v $(pwd):/usr/src/app \
-      -v $HOME:/root \
-      floral-web \
-      sleep infinity
-    ```
-3.  **Start Server (Inside Container):**
-    ```bash
-    docker exec -it floral-web ./start.sh
-    ```
-    *   **Note:** The `start.sh` script runs a split build/serve process to ensure URLs are generated correctly (`http://localhost:4000`) while listening on `0.0.0.0`. It uses `_config_docker.yml`.
+    *   **Note:** This command builds the image, installs all Ruby and NPM dependencies, and starts the development server.
+    *   **Volume Mounting:** Your local directory is mounted into the container for live-editing, while `node_modules` is protected via an anonymous volume to prevent host-container conflicts.
+
+2.  **Access:** Open `http://localhost:4000` in your browser.
+
+### How Docker Compose Works
+`docker-compose` acts as an orchestrator that simplifies the management of container settings (ports, volumes, environment variables).
+
+*   **Why `--build`?** The `--build` flag tells Docker to re-examine the `Dockerfile`. If it detects changes in your `Gemfile` or `package.json`, it will re-install the necessary dependencies to keep the container environment in sync with your project.
+*   **When to Rebuild:** You **must** use the `--build` flag whenever you:
+    *   Add or update a Ruby gem in `Gemfile`.
+    *   Add or update an NPM package in `package.json`.
+    *   Modify the `Dockerfile` itself.
+*   **Live Editing:** For regular changes to HTML, SCSS, or Markdown, you do **not** need to rebuild. The container mounts your local directory and Jekyll's "watch" mode will detect and apply those changes instantly.
 
 ## Directory Structure & Key Files
 

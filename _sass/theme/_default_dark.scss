@@ -3,7 +3,7 @@
     ========================================================================== */
 
 /* Color codes used for the theme */
-$primary-color              : #B39DDB; /* Lilac/Lavender */
+$primary-color              : #FFF59D; /* Soft Yellow */
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
@@ -13,13 +13,13 @@ $background                 : #000000; /* Pitch Black */
 $background-light           : #1a1a1a;
 $background-lighter         : #333333;
 $text                       : #ffffff;
-$link                       : #B39DDB;
+$link                       : #FFF59D;
 $link-dark                  : mix(#000, $link, 25%);
 $link-light                 : mix(#fff, $link, 25%);
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
-$info-color                 : #B39DDB;
+$info-color                 : #FFF59D;
 $notice-color               : #7a8288;
 $success-color              : #62c462;
 $warning-color              : #FFEB3B;
@@ -53,5 +53,16 @@ html[data-theme="dark"] {
     --global-text-color                 : #{$text};
     --global-text-color-light           : #f3f3f3;
     --global-thead-color                : #{$background-lighter};
+    --global-selection-color            : #FFF59D; /* Soft Yellow highlight */
+}
+
+html[data-theme="dark"] ::selection {
+  background: var(--global-selection-color);
+  color: #000; /* Keep text dark for readability on yellow */
+}
+
+html[data-theme="dark"] ::-moz-selection {
+  background: var(--global-selection-color);
+  color: #000;
 }
 
