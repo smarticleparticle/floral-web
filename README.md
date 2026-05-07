@@ -1,6 +1,6 @@
 # floral-web
 
-Based on the Academic Pages template.
+Goto https://kenjimarshall.github.io/floral-web. Based on the Academic Pages template.
 
 ## Configuration
 
