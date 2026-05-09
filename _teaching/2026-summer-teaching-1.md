@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2026-summer-teaching-1
 venue: "Stanford University, Electrical Engineering Department"
-date: 2026-06
+date: 2026-06-22
 location: "Stanford, USA"
 ---
 
