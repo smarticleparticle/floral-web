@@ -1,1 +1,1 @@
-Sitemap: https://smarticleparticle.github.io/floral-web/sitemap.xml
+Sitemap: https://smarticleparticle.github.io/sitemap.xml
