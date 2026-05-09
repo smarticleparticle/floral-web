@@ -253,8 +253,8 @@ layout: default
 <div id="main" role="main" style="width: 100%;">
   
   <!-- The Link Petals -->
-  {% assign labels = "Name,Research,Publications,Teaching,Projects,Blog,CV,Fun!" | split: "," %}
-  {% assign urls = "/name/,/research/,/publications/,/teaching/,/projects/,/blog/,/cv/,/fun/" | split: "," %}
+  {% assign labels = "Alisa,Research,Publications,Talks,Teaching,Projects,Blog,CV,Fun!,Communication" | split: "," %}
+  {% assign urls = "/alisa/,/research/,/publications/,/talks/,/teaching/,/projects/,/blog/,/cv/,/fun/,/communication/" | split: "," %}
 
   <!-- Global SVG Definitions -->
   <svg style="display: none;">
@@ -343,58 +343,66 @@ layout: default
       <!-- DECORATIVE PETAL -->
       <!-- To activate this petal, add label text and set it to petal-nav instead of petal-decorative -->
       <!-- Also add petal-outline class -->
-      <g class="petal-interactive petal-decorative" transform="translate(400,400) rotate(36)">
-          <use href="#petal-curved-right" transform="translate(0,-35)" />
-          <text transform="rotate(-36, -5, -235)" x="-30" y="-213" dominant-baseline="middle" text-anchor="start" class="nav-label"></text>
-      </g>
       <a href="{{ base_path }}{{ urls[1] }}">
-        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(72)">
-          <use href="#petal-curved-left" class="petal-outline" transform="translate(0,-35)" />
-          <text transform="rotate(-72, 5, -235)" x="-35" y="-225" dx="15" dominant-baseline="middle" text-anchor="start" class="nav-label">{{ labels[1] }}</text>
+        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(36)">
+            <use href="#petal-curved-right" class="petal-outline" transform="translate(0,-35)" />
+            <text transform="rotate(-36, -5, -235)" x="-30" y="-213" dominant-baseline="middle" text-anchor="start" class="nav-label">{{ labels[1] }}</text>
         </g>
       </a>
       <a href="{{ base_path }}{{ urls[2] }}">
-        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(108)">
-          <use href="#petal-wide" class="petal-outline" transform="translate(0,-35)" />
-          <text transform="rotate(-108, 0, -235)" x="-40" y="-240" dx="15" dominant-baseline="middle" text-anchor="start" class="nav-label">{{ labels[2] }}</text>
+        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(72)">
+          <use href="#petal-curved-left" class="petal-outline" transform="translate(0,-35)" />
+          <text transform="rotate(-72, 5, -235)" x="-35" y="-225" dx="15" dominant-baseline="middle" text-anchor="start" class="nav-label">{{ labels[2] }}</text>
         </g>
       </a>
       <a href="{{ base_path }}{{ urls[3] }}">
-        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(144)">
-          <use href="#petal-symmetric" class="petal-outline" transform="translate(0,-35)" />
-          <text transform="rotate(-144, 0, -235)" x="-35" y="-245" dx="15" dominant-baseline="middle" text-anchor="start" class="nav-label">{{ labels[3] }}</text>
+        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(108)">
+          <use href="#petal-wide" class="petal-outline" transform="translate(0,-35)" />
+          <text transform="rotate(-108, 0, -235)" x="-40" y="-240" dx="15" dominant-baseline="middle" text-anchor="start" class="nav-label">{{ labels[3] }}</text>
         </g>
       </a>
       <a href="{{ base_path }}{{ urls[4] }}">
-        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(180)">
-          <use href="#petal-curved-right" class="petal-outline" transform="translate(0,-35)" />
-          <text transform="rotate(-180, -5, -235)" x="0" y="-280" dy="25" dominant-baseline="hanging" text-anchor="middle" class="nav-label">{{ labels[4] }}</text>
+        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(144)">
+          <use href="#petal-symmetric" class="petal-outline" transform="translate(0,-35)" />
+          <text transform="rotate(-144, 0, -235)" x="-35" y="-245" dx="15" dominant-baseline="middle" text-anchor="start" class="nav-label">{{ labels[4] }}</text>
         </g>
       </a>
       <a href="{{ base_path }}{{ urls[5] }}">
-        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(216)">
-          <use href="#petal-curved-left" class="petal-outline" transform="translate(0,-35)" />
-          <text transform="rotate(-216, 5, -235)" x="35" y="-245" dx="-15" dominant-baseline="middle" text-anchor="end" class="nav-label">{{ labels[5] }}</text>
+        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(180)">
+          <use href="#petal-curved-right" class="petal-outline" transform="translate(0,-35)" />
+          <text transform="rotate(-180, -5, -235)" x="0" y="-280" dy="25" dominant-baseline="hanging" text-anchor="middle" class="nav-label">{{ labels[5] }}</text>
         </g>
       </a>
       <a href="{{ base_path }}{{ urls[6] }}">
-        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(252)">
-          <use href="#petal-wide" class="petal-outline" transform="translate(0,-35)" />
-          <text transform="rotate(-252, 0, -235)" x="40" y="-240" dx="-15" dominant-baseline="middle" text-anchor="end" class="nav-label">{{ labels[6] }}</text>
+        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(216)">
+          <use href="#petal-curved-left" class="petal-outline" transform="translate(0,-35)" />
+          <text transform="rotate(-216, 5, -235)" x="35" y="-245" dx="-15" dominant-baseline="middle" text-anchor="end" class="nav-label">{{ labels[6] }}</text>
         </g>
       </a>
       <a href="{{ base_path }}{{ urls[7] }}">
+        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(252)">
+          <use href="#petal-wide" class="petal-outline" transform="translate(0,-35)" />
+          <text transform="rotate(-252, 0, -235)" x="40" y="-240" dx="-15" dominant-baseline="middle" text-anchor="end" class="nav-label">{{ labels[7] }}</text>
+        </g>
+      </a>
+      <a href="{{ base_path }}{{ urls[8] }}">
       <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(288)">
          <use href="#petal-curved-left" transform="translate(0,-35)" />
-         <text transform="rotate(-288, 0, -235)" x="10" y="-230" dx="15" dominant-baseline="middle" text-anchor="end" class="nav-label">{{ labels[7] }}</text> 
+         <text transform="rotate(-288, 0, -235)" x="10" y="-230" dx="15" dominant-baseline="middle" text-anchor="end" class="nav-label">{{ labels[8] }}</text> 
       </g>
       </a>
-     
-      <!-- Another decorative petal -->
-      <g class="petal-interactive petal-decorative" transform="translate(400,400) rotate(324)">
+      <a href="{{ base_path }}{{ urls[9] }}">
+        <g class="petal-interactive petal-nav" transform="translate(400,400) rotate(324)">
+         <use href="#petal-wide" transform="translate(0,-35)" />
+         <text transform="rotate(-324, 0, -235)" x="40" y="-225" dx="-15" dominant-baseline="middle" text-anchor="end" class="nav-label">{{ labels[9] }}</text>
+        </g>
+      </a>
+      
+      <!-- Decorative Petal -->
+      <!-- <g class="petal-interactive petal-decorative" transform="translate(400,400) rotate(324)">
          <use href="#petal-wide" transform="translate(0,-35)" />
          <text transform="rotate(-324, 0, -235)" x="40" y="-225" dx="-15" dominant-baseline="middle" text-anchor="end" class="nav-label"></text>
-      </g>
+      </g> -->
 
       <!-- Center Disk -->
       <g transform="translate(400, 400)">

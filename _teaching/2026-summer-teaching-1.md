@@ -11,15 +11,11 @@ location: "Stanford, USA"
 An immersive, hands-on design lab where students learn engineering by building technologies that address real community needs. Partnering with local organizations supporting unhoused individuals in the Bay Area, students design and prototype working devices that promote safety, security, and connection.
 
 ## Course Overview
-======
-
 This project-based course teaches electronics fundamentals through meaningful community engagement. Students work in teams to identify real challenges, design solutions, and build working prototypes—all while receiving feedback from actual community partners. A central case study on tent safety systems grounds technical learning in human-centered design principles.
 
 By the end of the quarter, students present working prototypes that demonstrate both technical competence and tangible community impact.
 
 ## What Students Learn
-======
-
 **Technical Skills:**
 - Sensor integration (infrared sensors, reed switches, temperature sensors)
 - Microcontroller programming (Arduino/C)
@@ -35,11 +31,7 @@ By the end of the quarter, students present working prototypes that demonstrate 
 - Technical communication and presentation
 
 ## Course Philosophy
-======
-
 No prior engineering experience required—students from all majors are welcome. This course demonstrates how engineering can create tangible difference in our local community. Through direct partnership with Bay Area organizations, students see their work impact real people's lives while developing fundamental engineering skills.
 
 ## Course Development
-======
-
-This is my first course as an instructor. I proposed, designed, and am developing all curriculum and community partnerships for EE111. The course was approved by Stanford's Electrical Engineering Department and will launch in Summer 2026. Enrollment has reached maximum capacity at 35 students!
+This is my first full course as an instructor. I proposed, designed, and am developing all curriculum and community partnerships for EE111. The course was approved by Stanford's Electrical Engineering Department and will launch in Summer 2026. Enrollment has reached maximum capacity at 35 students!
