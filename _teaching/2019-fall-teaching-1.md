@@ -4,7 +4,7 @@ collection: teaching
 type: "Teaching Assistant"
 permalink: /teaching/2019-fall-teaching-1
 venue: "Massachusetts Institute of Technology, CC18.02"
-date: 2019
+date: 2019-09-26
 location: "Cambridge, MA, USA"
 ---
 
