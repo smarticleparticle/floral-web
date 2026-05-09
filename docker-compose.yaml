@@ -1,0 +1,13 @@
+services:
+  floral-web:
+    image: floral-web
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules # Protect container node_modules from being overwritten by local mount
+    ports:
+      - 4000:4000
+    environment:
+      - JEKYLL_ENV=docker
+    # Use the optimized start script that handles URL generation correctly
+    command: ./start.sh
